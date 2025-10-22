@@ -1,0 +1,19 @@
+name: Socket Scan
+on:
+  push:
+
+permissions:
+  contents: read
+  pull-requests: write
+  
+jobs:
+  socket-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Run Socket Basics
+        uses: SocketDev/socket-basics@v1.0.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          socket_security_api_key: ${{ secrets.SOCKET_SECURITY_API_KEY }}
