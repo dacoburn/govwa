@@ -1,19 +1,21 @@
 name: Socket Scan
 on:
   push:
-
-permissions:
-  contents: read
-  pull-requests: write
   
 jobs:
   socket-scan:
+    permissions:
+      issues: write
+      contents: read
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       
       - name: Run Socket Basics
-        uses: SocketDev/socket-basics@1.0.3
+        uses: SocketDev/socket-basics@1.0.10
+        env:
+          GITHUB_PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           socket_security_api_key: ${{ secrets.SOCKET_SECURITY_API_KEY }}
