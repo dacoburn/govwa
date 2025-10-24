@@ -76,3 +76,4 @@ func createProfileTable() error {
 	}
 	return nil
 }
+
