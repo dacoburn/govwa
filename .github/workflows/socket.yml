@@ -1,6 +1,7 @@
-name: Socket Scan
+name: Security Scan
 on:
-  push:
+  pull_request:
+    types: [opened, synchronize, reopened]
   
 jobs:
   socket-scan:
