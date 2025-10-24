@@ -19,7 +19,7 @@ import (
 )
 
 const (
-	banner = `
+	banner = ` 
      ÛÛÛÛÛÛÛÛÛ           ÛÛÛÛÛ   ÛÛÛÛÛ ÛÛÛÛÛ   ÛÛÛ   ÛÛÛÛÛ   ÛÛÛÛÛÛÛÛÛ  
     ÛÛÛ°°°°°ÛÛÛ         °°ÛÛÛ   °°ÛÛÛ °°ÛÛÛ   °ÛÛÛ  °°ÛÛÛ   ÛÛÛ°°°°°ÛÛÛ 
    ÛÛÛ     °°°   ÛÛÛÛÛÛ  °ÛÛÛ    °ÛÛÛ  °ÛÛÛ   °ÛÛÛ   °ÛÛÛ  °ÛÛÛ    °ÛÛÛ 
@@ -31,6 +31,7 @@ const (
 )
 
 //index and set cookie
+//test
 
 func indexHandler(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 
@@ -82,3 +83,4 @@ func main() {
 	}
 
 }
+
